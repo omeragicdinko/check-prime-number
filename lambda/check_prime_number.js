@@ -16,7 +16,7 @@ exports.handler = (event, context, callback) => {
         callback(null, { // number is not prime
             status: 200,
             number_is_prime: false,
-            divisible_by: "an uknown number of numbers and is not considered a prime number by the definition"
+            divisible_by: "an uknown number of numbers, and is not considered a prime number by the definition"
         });
     } else if (number == 1) {
         callback(null, { // number is not prime
