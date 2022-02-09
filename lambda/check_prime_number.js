@@ -27,7 +27,6 @@ exports.handler = (event, context, callback) => {
                 if (res.is_divisible) {
                     callback(null, { // number is not prime
                         status: 200,
-                        invalid_format: false,
                         number_is_prime: false,
                         divisible_by: res.is_divisible_by
                     });
@@ -35,7 +34,6 @@ exports.handler = (event, context, callback) => {
                     if (counter1 == counter2) {
                         callback(null, { // number is prime
                             status: 200,
-                            invalid_format: false,
                             number_is_prime: true,
                             divisible_by: ""
                         });

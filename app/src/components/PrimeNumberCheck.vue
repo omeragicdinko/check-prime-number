@@ -80,7 +80,7 @@ export default {
         .then(response => {
           self.previousInputNumber = self.inputNumber;
           self.inputNumber = "";
-          if (response.data.number_is_prime && !response.data.invalid_format) {
+          if (response.data.number_is_prime) {
               self.numberNotPrime = false;
               self.numberIsPrime = true;
               Vue.$toast.success("It is a prime number.", {
