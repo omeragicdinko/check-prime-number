@@ -12,6 +12,32 @@ exports.handler = (event, context, callback) => {
     let counter1 = 0;
     let counter2 = 0;
     
+    if (number <= 0) {
+        callback(null, { // number is not prime
+            status: 200,
+            number_is_prime: false,
+            divisible_by: "an uknown number of numbers and is not considered a prime number by the definition"
+        });
+    } else if (number == 1) {
+        callback(null, { // number is not prime
+            status: 200,
+            number_is_prime: false,
+            divisible_by: "only one number (itself)"
+        });
+    } else if (number == 2) {
+        callback(null, { // number is not prime
+            status: 200,
+            number_is_prime: true,
+            divisible_by: ""
+        });
+    } else if (number == 3) {
+        callback(null, { // number is not prime
+            status: 200,
+            number_is_prime: true,
+            divisible_by: ""
+        });
+    }
+    
     for (let i = 2, s = Math.sqrt(number); i <= s; i++) {
         const LAMBDA_PARAMS = {
             FunctionName: 'check-divisible-number',

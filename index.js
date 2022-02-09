@@ -36,7 +36,7 @@ app.post('/check', upload, (req, res) => {
         'number': req.body.number
     });
 
-    var regex=/^[0-9]+$/;
+    var regex=/^-?[0-9]+$/;
     if (!req.body.number.match(regex)) {
         res.status(400).send('Checking failed.');
         return
